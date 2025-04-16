@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  t-menu-app-fe:
+    build: .
+    ports:
+      - "80:80"
+    restart: always

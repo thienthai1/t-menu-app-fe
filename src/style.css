@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+body {
+    font-family: 'kanit', sans-serif;
+    background-color: rgb(118, 163, 222);
+}
