@@ -3,7 +3,7 @@ import axios from "axios";
 const AxiosHandler = () => {
 
     const axiosInstance = axios.create({
-        baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : 'https://honest-platform-backend.baanbaan.site',
+        baseURL: import.meta.env.VITE_BACKEND_URL ? import.meta.env.VITE_BACKEND_URL : 'https://honest-platform-backend.baanbaan.site',
         timeout: 300000
     })
 

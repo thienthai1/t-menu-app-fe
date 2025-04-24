@@ -136,6 +136,27 @@ const useAPIs = () => {
         }
     }
 
+    const getAllFoodOptional = async () => {
+        try {
+            const response = await axiosInstance.get('/food-optionals');
+            return response.data;
+        } catch (error) {
+            handleResponseStatus(error.response.status);
+            console.error('Failed to fetch categories:', error);
+            throw error;
+        }
+    }
+
+    const addFoodDataOptionalGroup = async (data) => {
+        try {
+            const response = await axiosInstance.post('/food-optional-group', data);
+            return response.data;
+        } catch (error) {
+            console.error('Login failed:', error);
+            throw error;
+        }
+    }
+
     return { 
         getAllFoods,
         login,
@@ -147,7 +168,9 @@ const useAPIs = () => {
         getAllCategories,
         deleteFood,
         getProfile,
-        getAllFoodOptionalGroup
+        getAllFoodOptionalGroup,
+        addFoodDataOptionalGroup,
+        getAllFoodOptional
     }
 
 }
